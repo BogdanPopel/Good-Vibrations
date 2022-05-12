@@ -1,0 +1,13 @@
+
+.footer-container {
+  position:fixed;
+  bottom: 0;
+  text-align: center;
+  width:100%;
+  background-color: #F9E0D9;
+}
+.footer-content {
+  text-align: center;
+  margin-top : 10px;
+}
+
