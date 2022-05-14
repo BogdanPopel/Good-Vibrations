@@ -58,4 +58,57 @@
     width: 100%;
     height: auto;
   }
+    @media screen and (max-width: 480px) {
+      .map-bg {
+          opacity: 0.2;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 270%;
+      }
+      .gridContent{
+          position: absolute;
+      display: table-column-group;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      align-items: start;
+      bottom: -230px;
+      }
+      .welcome{
+          opacity: 0;
+      }
+      .message{
+          width: 80%;
+      }
+  }
+@media screen and (max-width: 480px) {
+  .map-bg {
+      opacity: 0.2;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 270%;
+  }
+  .gridContent{
+      position: absolute;
+  display: table-column-group;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: start;
+  bottom: -230px;
+  }
+  .welcome{
+      opacity: 0;
+  }
+  .message{
+      width: 80%;
+  }
+}
+
 
