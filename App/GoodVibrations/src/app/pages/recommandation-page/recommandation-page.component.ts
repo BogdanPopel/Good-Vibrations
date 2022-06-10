@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-recommandation-page',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecommandationPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public afAuth: AngularFireAuth) { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
+
+    logout(): void {
+        this.afAuth.signOut();
+    }
+
 
 }
