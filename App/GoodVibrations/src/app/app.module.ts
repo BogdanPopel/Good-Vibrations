@@ -14,6 +14,18 @@ import { RecommandationPageComponent } from './pages/recommandation-page/recomma
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+import { environment } from 'src/environments/environment';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -24,18 +36,22 @@ import { HttpClientModule } from '@angular/common/http';
     LoginPageComponent,
     SignUpPageComponent,
     MainPageComponent,
-    RecommandationPageComponent
-
+    RecommandationPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule,
     FormsModule,
+    NoopAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

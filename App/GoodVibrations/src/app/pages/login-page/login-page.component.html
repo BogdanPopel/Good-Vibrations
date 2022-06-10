@@ -2,42 +2,38 @@
   rel="stylesheet"
   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 />
-<div class="row">
-  <div class="col-xs-12 col-md-6 col-md-offset-3">
-    <form>
-      <div class="form-group">
-        <label for="email">E-Mail</label>
+<button mat-raised-button color="primary" routerLink="../">Home</button>
+
+<mat-card>
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser()" type="">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
         <input
+          autocomplete="off"
+          formControlName="email"
           type="email"
-          id="email"
-          class="form-control"
-          ngModel
-          name="email"
-          required
-          email
+          matInput
+          placeholder="Email"
         />
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
         <input
+          autocomplete="off"
+          formControlName="password"
           type="password"
-          id="password"
-          class="form-control"
-          ngModel
-          name="password"
-          required
-          minlength="6"
+          matInput
+          placeholder="Password"
         />
-      </div>
-      <div>
-        <button class="btn btn-primary" type="submit">Login</button>
-        |
-        <a href="#" class="btn btn-danger">
-            <i class="fa fa-google"></i> Sign in with <b>Google</b>
-            </a>
-      </div>
-      <p class="mt-auto">Don't have an account?</p>
-      <button class="btn btn-primary" (click)="switchToSignUp()" type="button">Switch to SignUp</button>
-    </form>
-  </div>
-</div>
+      </mat-form-field>
+    </p>
+    <div *ngIf="firebaseErrorMessage != ''" class="error-style">
+      <span>{{ firebaseErrorMessage }}</span>
+    </div>
+
+    <button mat-raised-button color="primary">Login</button>
+  </form>
+</mat-card>

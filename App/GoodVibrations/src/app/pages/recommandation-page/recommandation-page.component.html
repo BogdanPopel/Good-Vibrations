@@ -1,1 +1,7 @@
+<div *ngIf="(afAuth.user | async)">
+    <br>
+    <button mat-raised-button color="primary" (click)="logout()">
+        Log out
+    </button>
+</div>
 <p>recommandation-page works!</p>
