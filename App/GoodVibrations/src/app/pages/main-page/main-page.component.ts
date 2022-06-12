@@ -63,6 +63,7 @@ export class MainPageComponent implements OnInit {
       id: this._id,
       photoUrl: this._photoUrl,
       locationName: this._locationName,
+      address: this._locationAddress,
       musicGenres: this._musicGenres,
       mapsUrl: this._mapsUrl,
       locationAddress : this._locationAddress
