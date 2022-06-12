@@ -27,7 +27,7 @@ export class AuthService {
       .then(() => {
         console.log('Auth Service: loginUser: success');
       })
-      .catch(error => {
+      .catch((error) => {
         alert(error);
       });
   }
@@ -37,8 +37,9 @@ export class AuthService {
       .createUserWithEmailAndPassword(user.email, user.password)
       .then((result) => {
         let emailLower = user.email.toLowerCase();
-        //result.user.sendEmailVerification();                    // immediately send the user a verification email
       })
-      .catch();
+      .catch((error) => {
+        alert(error);
+      });
   }
 }
