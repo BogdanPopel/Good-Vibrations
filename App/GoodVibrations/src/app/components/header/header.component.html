@@ -16,6 +16,9 @@
         <li routerLinkActive="active">
           <a routerLink="./recommandation">I Feel Lucky</a>
         </li>
+        <li routerLinkActive="active" *ngIf="afAuth.user | async">
+          <a (click)="logout()" routerLink="./home">Sign Out</a>
+        </li>
       </ul>
     </div>
   </div>

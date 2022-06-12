@@ -1,7 +1,21 @@
-<div *ngIf="(afAuth.user | async)">
+<!-- <div *ngIf="(afAuth.user | async)">
     <br>
     <button mat-raised-button color="primary" (click)="logout()">
         Log out
     </button>
-</div>
-<p>recommandation-page works!</p>
+</div> -->
+
+<div class="col">
+    <h2>Your lucky location:</h2>
+    <ul>
+      <li *ngFor="let location of locationsListLucky; let i = index">
+        <p>{{location.locationName}}</p>
+        <img src="{location.photoUrl}" alt="">
+        <p>{{location.musicGenres}}</p>
+        <p>{{location.address}}</p>
+        <a href="{location.mapsUrl}">Click here to view location</a>
+        <p>{{location.mapsUrl}}</p>
+        <p></p>
+      </li>
+    </ul>
+  </div>

@@ -42,6 +42,7 @@ import { MatInputModule } from '@angular/material/input';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     MatButtonModule,
     MatCardModule,
     MatInputModule,
