@@ -1,0 +1,27 @@
+table{
+table-layout: auto;
+}
+th{
+text-align: center;
+border: 1px solid black;
+background-color:#c78283;
+}
+td{
+text-align: center;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-right: 16px;
+padding-left: 16px;
+margin: 1px black;
+border: 1px solid black;
+white-space:pre-wrap;
+word-wrap:break-word;
+}
+.odd {
+background-color: #f9e0d9;
+}
+.even {
+background-color: #e6dbd0;
+}
+
+

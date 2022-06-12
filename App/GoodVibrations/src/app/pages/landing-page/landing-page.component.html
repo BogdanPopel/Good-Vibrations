@@ -1,26 +1,18 @@
-<div class = "landingContainer">
+<div class = "row backroundimg">
+  <div class = "container">
 
-  <img class = "map-bg" src ="/assets/landing-page-bg.png" >
-
-  <div class = "landingContent">
-    <p class = "welcome">WELCOME!</p>
-
-    <div class = "gridContent">
-      <div class="message">
-        Never overthink where you're going out with your friends again!
-        Good Vibrations is an app that makes getting accustomed to new cities easier. You may even discover something new about your city!
-        You will find restaurants, bars, parks, concerts and even festivals that are recommended by other users.
+    <div class="card w-50">
+      <div class="card-body">
+        <h1 class="card-title">Welcome!</h1>
+        <p class="card-text"> Never overthink where you're going out with your friends again!
+          Good Vibrations is an app that makes getting accustomed to new cities easier. You may even discover something new about your city!
+          You will find restaurants, bars, parks, concerts and even festivals that are recommended by other users.</p>
       </div>
-      <div class = "buttonsLanding">
-        <div class="signUp">
-          <p class="mt-auto">Don't have an account?</p>
-          <button class="btn btn-primary" (click)="switchToSignUp()" type="button">Join now</button>
-        </div>
-        <div class="signIn">
-          <p class="mt-auto">Already have an account?</p>
-          <button class="btn btn-primary" (click)="switchToSignIn()" type="button">Sign in</button>
-        </div>
-      </div>
+      <button class="btn btn-primary btn-lg" (click)="switchToSignIn()" type="button">Sign in</button>
+      <button class="btn btn-primary btn-lg" (click)="switchToSignUp()" type="button">Join now</button>
     </div>
+
   </div>
 </div>
+
+
