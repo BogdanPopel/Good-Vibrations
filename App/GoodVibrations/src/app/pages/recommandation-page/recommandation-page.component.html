@@ -10,10 +10,10 @@
     <ul>
       <li *ngFor="let location of locationsListLucky; let i = index">
         <p>{{location.locationName}}</p>
-        <img src="{location.photoUrl}" alt="">
+        <img src="{{location.photoUrl}}" alt="">
         <p>{{location.musicGenres}}</p>
         <p>{{location.address}}</p>
-        <a href="{location.mapsUrl}">Click here to view location</a>
+        <a href="{{location.mapsUrl}}">Click here to view location</a>
         <p>{{location.mapsUrl}}</p>
         <p></p>
       </li>

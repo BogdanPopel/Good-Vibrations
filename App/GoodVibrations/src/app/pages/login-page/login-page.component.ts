@@ -41,6 +41,7 @@ export class LoginPageComponent implements OnInit {
         } else if (result.isValid == false) {
           console.log('login error', result);
           this.firebaseErrorMessage = result.message;
+          alert("Login error!");
         }
       });
   }
