@@ -57,6 +57,7 @@
         <tr>
           <th scope="col">Name</th>
           <th scope="col">Music Genres</th>
+          <th scope="col">Volume Rating</th>
           <th scope="col">Adress</th>
           <th scope="col">Image</th>
           <th scope="col">View Location!</th>
@@ -67,6 +68,7 @@
         <tr *ngFor="let location of locationsList; let i = index; let even = even; let odd = odd" [ngClass]="{ odd: odd, even: even}">
           <td>{{ location.locationName }}</td>
           <td>{{ location.musicGenres }}</td>
+<!--          <td>{{ location.volumeRating}}</td>-->
           <td>{{location.address}}</td>
           <td><img src="{{location.photoUrl}}" alt="Could not retrieve image" style="width:150px;height:100%;"></td>
           <td><a href="{{location.mapsUrl}}">VIEW</a></td>
