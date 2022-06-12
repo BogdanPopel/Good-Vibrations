@@ -43,7 +43,9 @@ export class SignUpPageComponent implements OnInit {
         else if (result.isValid == false)
           this.firebaseErrorMessage = result.message;
       })
-      .catch(() => {});
+      .catch(() => {
+        alert('Error');
+      });
   }
 
   switchToLogin() {

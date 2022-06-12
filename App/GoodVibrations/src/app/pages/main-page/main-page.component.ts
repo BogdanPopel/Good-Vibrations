@@ -21,8 +21,6 @@ export class MainPageComponent implements OnInit {
   public _mg: string | undefined;
   public _mapsUrl: string | undefined;
   constructor(public afAuth: AngularFireAuth, private db: AngularFireDatabase) {
-    //this.db.object('locations/0').set({id: 1, photoUrl:"https://www.restocracy.ro/wp-content/uploads/2017/06/Quantic-Club-pub-si-club-in-Grozavesti-13.jpg", locationName:"Quantic Pub", address:"Șoseaua Grozăvești 82, București 060752", musicGenres:["Rock", "Metal"], mapsUrl:"https://goo.gl/maps/KxqxEgheoXKQn7Eh6"});
-    //console.log('db');
     this.getStarted();
   }
 
