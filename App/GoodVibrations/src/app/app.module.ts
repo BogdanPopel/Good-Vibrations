@@ -52,6 +52,16 @@ import { MatInputModule } from '@angular/material/input';
     FormsModule,
     NoopAnimationsModule,
   ],
+  exports: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    LandingPageComponent,
+    LoginPageComponent,
+    SignUpPageComponent,
+    MainPageComponent,
+    RecommandationPageComponent
+],
   providers: [],
   bootstrap: [AppComponent],
 })
