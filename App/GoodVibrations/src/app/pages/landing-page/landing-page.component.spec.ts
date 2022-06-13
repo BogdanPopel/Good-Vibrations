@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LandingPageComponent } from './landing-page.component';
 import {RouterTestingModule} from '@angular/router/testing';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
 
 describe('LandingPageComponent', () => {
   let component: LandingPageComponent;
@@ -10,6 +12,7 @@ describe('LandingPageComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
+      providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase }],
       declarations: [ LandingPageComponent ]
     })
     .compileComponents();
