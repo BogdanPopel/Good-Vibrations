@@ -27,6 +27,8 @@ Our team has come up with 10 user stories:
 
 ## UML
 
+![UML- GoodVibrations drawio(1)](https://user-images.githubusercontent.com/79644230/173407467-9c4c09da-9c06-4010-a4ff-2c09bb402dec.svg)
+
 ## Bug Reporting
 
 During the development, we encountered some bugs:
