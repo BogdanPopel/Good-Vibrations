@@ -42,10 +42,10 @@ import { MatInputModule } from '@angular/material/input';
     RecommandationPageComponent,
   ],
   imports: [
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     MatButtonModule,
     MatCardModule,
     MatInputModule,
@@ -54,7 +54,7 @@ import { MatInputModule } from '@angular/material/input';
     RouterModule,
     FormsModule,
     NoopAnimationsModule,
-    RouterTestingModule
+    //RouterTestingModule
   ],
   exports: [
     AppComponent,
