@@ -45,4 +45,7 @@ During the development, we encountered some bugs:
 ## Automation Testing
 
 For testing, we used the ng test command from AngularCLI, that uses Jasmine Test Framework.
+![Karma - Google Chrome 6_13_2022 8_13_53 PM](https://user-images.githubusercontent.com/79644230/173408553-205b114f-4def-4510-be4d-047df65a3710.png)
+
+
 
