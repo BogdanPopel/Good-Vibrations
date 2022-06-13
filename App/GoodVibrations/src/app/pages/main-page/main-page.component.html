@@ -27,11 +27,11 @@
       </div>
     </div>
     <div class="form-group">
-        <div class="col-lg-6">
-          <label>Location Address:</label>
-          <input class="form-control text-center" [(ngModel)]="_locationAddress"/>
-        </div>
+      <div class="col-lg-6">
+        <label>Location Address:</label>
+        <input class="form-control text-center" [(ngModel)]="_locationAddress"/>
       </div>
+    </div>
     <div class="form-group">
       <div class="col-lg-6">
         <label>Music Genres (separated by comma):</label>
@@ -47,13 +47,36 @@
       </div>
     </div>
   </div>
+
+  <div class="col">
+    <h2>Locations:</h2>
+    <div style="overflow-x: scroll; overflow-y: scroll; table table-responsive">
+      <table class="table table-hover">
+
+        <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Music Genres</th>
+          <th scope="col">Volume Rating</th>
+          <th scope="col">Adress</th>
+          <th scope="col">Image</th>
+          <th scope="col">View Location!</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let location of locationsList; let i = index; let even = even; let odd = odd" [ngClass]="{ odd: odd, even: even}">
+          <td>{{ location.locationName }}</td>
+          <td>{{ location.musicGenres }}</td>
+<!--          <td>{{ location.volumeRating}}</td>-->
+          <td>{{location.address}}</td>
+          <td><img src="{{location.photoUrl}}" alt="Could not retrieve image" style="width:150px;height:100%;"></td>
+          <td><a href="{{location.mapsUrl}}">VIEW</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
-<div class="col">
-  <h2>Locations:</h2>
-  <ul>
-    <li *ngFor="let location of locationsList; let i = index">
-      {{ location.id }}, {{ location.locationName }}
-    </li>
-  </ul>
-</div>
+

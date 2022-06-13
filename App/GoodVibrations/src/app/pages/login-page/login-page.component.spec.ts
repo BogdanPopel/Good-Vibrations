@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginPageComponent } from './login-page.component';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('LoginPageComponent', () => {
   let component: LoginPageComponent;
@@ -8,6 +9,7 @@ describe('LoginPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [ LoginPageComponent ]
     })
     .compileComponents();

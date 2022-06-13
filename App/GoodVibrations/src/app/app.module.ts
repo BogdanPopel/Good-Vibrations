@@ -21,6 +21,9 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+import {RouterTestingModule} from '@angular/router/testing';
+
+
 import { environment } from 'src/environments/environment';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -39,10 +42,10 @@ import { MatInputModule } from '@angular/material/input';
     RecommandationPageComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    BrowserModule,
+    AppRoutingModule,
     MatButtonModule,
     MatCardModule,
     MatInputModule,
@@ -51,6 +54,7 @@ import { MatInputModule } from '@angular/material/input';
     RouterModule,
     FormsModule,
     NoopAnimationsModule,
+    RouterTestingModule
   ],
   exports: [
     AppComponent,
