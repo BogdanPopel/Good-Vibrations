@@ -56,6 +56,16 @@ import { MatInputModule } from '@angular/material/input';
     NoopAnimationsModule,
     RouterTestingModule
   ],
+  exports: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    LandingPageComponent,
+    LoginPageComponent,
+    SignUpPageComponent,
+    MainPageComponent,
+    RecommandationPageComponent
+],
   providers: [],
   bootstrap: [AppComponent],
 })
