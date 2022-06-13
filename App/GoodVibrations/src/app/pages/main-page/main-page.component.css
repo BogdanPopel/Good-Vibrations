@@ -16,11 +16,20 @@ margin: 1px black;
 border: 1px solid black;
 white-space:pre-wrap;
 word-wrap:break-word;
+font-weight: bold;
 }
 .odd {
 background-color: #f9e0d9;
 }
 .even {
+background-color: #e6dbd0;
+}
+.col-lg-6{
+background-color: #f9e0d9;
+padding-bottom:5px;
+padding-top:5px;
+}
+.form-control{
 background-color: #e6dbd0;
 }
 
