@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 
+
 @Component({
   selector: 'app-recommandation-page',
   templateUrl: './recommandation-page.component.html',
@@ -55,4 +56,5 @@ class Location {
   address: string | undefined;
   musicGenres: string[] | undefined;
   mapsUrl: string | undefined;
+  volumeRating: number | undefined;
 }

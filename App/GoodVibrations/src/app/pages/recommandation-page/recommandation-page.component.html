@@ -3,19 +3,20 @@
     <button mat-raised-button color="primary" (click)="logout()">
         Log out
     </button>
-</div> -->
-<div class = "row backroundimg">
-  <div class="col">
-    <li *ngFor="let location of locationsListLucky; let i = index">
-      <div class="card w-50">
-        <div class="card-body">
-          <h1 class="card-title">Your lucky location:</h1>
-          <h2 class="card-text"> {{location.locationName}}</h2>
-          <img src="{{location.photoUrl}}" alt="Could not retrieve image" style="width:90vh;height:100%;">
-          <h2 class="card-text"> {{location.musicGenres}}</h2>
-          <h2 class="card-text"> {{location.address}} <a href="{{location.mapsUrl}}">Click here to view location</a></h2>
+-->
+<div class="container" *ngFor="let location of locationsListLucky; let i = index">
+  <div class="row">
+    <div class="col">
+      <div class="thumbnail">
+        <img src="{{location.photoUrl}}" alt="...">
+        <div class="caption">
+          <h1><strong>{{location.locationName}}</strong></h1>
+          <p class="bg-danger"><strong>Music Genres: {{location.musicGenres}}</strong></p>
+          <p class="bg-danger"><strong>Adress: {{location.address}}</strong></p>
+          <p class="bg-danger" style="border-bottom: 1px solid black"><strong>Volume Rating: {{location.volumeRating}}</strong></p>
+          <p class="bg-danger"style="border-bottom: 1px solid black"><a href="{{location.mapsUrl}}" class="btn btn-primary" role="button">View location!</a></p>
         </div>
       </div>
-    </li>
+    </div>
   </div>
 </div>
