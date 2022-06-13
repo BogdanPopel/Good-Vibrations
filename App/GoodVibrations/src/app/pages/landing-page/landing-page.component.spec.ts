@@ -24,4 +24,11 @@ describe('LandingPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have variable for signUp`, () => {
+    const fixture = TestBed.createComponent(LandingPageComponent);
+    const app = fixture.componentInstance;
+    expect(app.signUpPath).toEqual('./signup');
+  });
+
 });
