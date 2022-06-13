@@ -10,18 +10,6 @@
   <div class="col">
     <div class="form-group">
       <div class="col-lg-6">
-        <label>ID:</label>
-        <input class="form-control text-center" readonly [(ngModel)]="_id" />
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-lg-6">
-        <label>Location Photo:</label>
-        <input class="form-control text-center" [(ngModel)]="_photoUrl" />
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-lg-6">
         <label>Location Name:</label>
         <input class="form-control text-center" [(ngModel)]="_locationName"/>
       </div>
@@ -34,8 +22,20 @@
     </div>
     <div class="form-group">
       <div class="col-lg-6">
+        <label>Location Photo:</label>
+        <input class="form-control text-center" [(ngModel)]="_photoUrl" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-6">
         <label>Music Genres (separated by comma):</label>
         <input class="form-control text-center" [(ngModel)]="_mg"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-6">
+        <label>Volume Rating(1-10):</label>
+        <input class="form-control text-center" [(ngModel)]="_volume" />
       </div>
     </div>
     <div class="form-group">
@@ -48,9 +48,10 @@
     </div>
   </div>
 
+
   <div class="col">
     <h2>Locations:</h2>
-    <div style="overflow-x: scroll; overflow-y: scroll; table table-responsive">
+    <div style="overflow-x: scroll; overflow-y: scroll;" class="table table-responsive">
       <table class="table table-hover">
 
         <thead>
@@ -68,9 +69,9 @@
         <tr *ngFor="let location of locationsList; let i = index; let even = even; let odd = odd" [ngClass]="{ odd: odd, even: even}">
           <td>{{ location.locationName }}</td>
           <td>{{ location.musicGenres }}</td>
-<!--          <td>{{ location.volumeRating}}</td>-->
+          <td>{{ location.volumeRating}}</td>
           <td>{{location.address}}</td>
-          <td><img src="{{location.photoUrl}}" alt="Could not retrieve image" style="width:150px;height:100%;"></td>
+          <td><img src="{{location.photoUrl}}" alt="Could not retrieve image" style="width:150px; height:100%;"></td>
           <td><a href="{{location.mapsUrl}}">VIEW</a></td>
         </tr>
         </tbody>

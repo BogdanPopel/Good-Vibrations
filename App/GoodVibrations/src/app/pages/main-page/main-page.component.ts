@@ -20,6 +20,7 @@ export class MainPageComponent implements OnInit {
   public _musicGenres: string[] | undefined;
   public _mg: string | undefined;
   public _mapsUrl: string | undefined;
+  public _volume!: number;
   constructor(public afAuth: AngularFireAuth, private db: AngularFireDatabase) {
     this.getStarted();
   }
@@ -31,7 +32,6 @@ export class MainPageComponent implements OnInit {
   }
 
   async getStarted() {
-    //console.log("GetStarted");
     var locations: Location[];
     locations = [];
     await this.getLocations().then((value) => {
@@ -39,12 +39,11 @@ export class MainPageComponent implements OnInit {
     });
 
     this.locationsList = locations;
-    //console.log(this.locationsList);
+
     this._id = this.locationsList.length + 1;
   }
 
   getLocations() {
-    //console.log("getLocations");
     return new Promise((resolve, reject) => {
       this.db
         .list('locations')
@@ -57,6 +56,12 @@ export class MainPageComponent implements OnInit {
 
   async addLocation() {
     this._musicGenres = this._mg?.split(',');
+    if (this._volume > 10) {
+      this._volume = 10;
+    }
+    if (this._volume < 0) {
+      this._volume = 0;
+    }
     var data = {
       id: this._id,
       photoUrl: this._photoUrl,
@@ -64,7 +69,8 @@ export class MainPageComponent implements OnInit {
       address: this._locationAddress,
       musicGenres: this._musicGenres,
       mapsUrl: this._mapsUrl,
-      locationAddress : this._locationAddress
+      locationAddress: this._locationAddress,
+      volumeRating: this._volume,
     };
     await this.db.object('locations/' + (this._id - 1)).set(data);
     await this.getStarted();
@@ -76,7 +82,10 @@ export class MainPageComponent implements OnInit {
     this._mapsUrl = '';
     this._mg = '';
     this._photoUrl = '';
+    this._locationAddress = '';
+    this._volume = 0;
   }
+
 }
 
 class Location {
@@ -86,4 +95,5 @@ class Location {
   address: string | undefined;
   musicGenres: string[] | undefined;
   mapsUrl: string | undefined;
+  volumeRating: number | undefined;
 }
