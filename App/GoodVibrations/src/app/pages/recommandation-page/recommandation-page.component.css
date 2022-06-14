@@ -1,36 +1,56 @@
 .card{
-border: 1px solid black;
+border: hidden ;
 text-align: center;
 padding-top: 10px;
 }
 h1{
     margin: 0px;
-    border-bottom: 1px solid black;
+    border-bottom: hidden;
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 0px;
+    text-align : center;
 }
 p{
-margin: 0;
+margin: 0px;
 padding: 10px;
-border-left: 1px solid black;
-border-right:1px solid black;
+border-left: hidden;
+border-right: hidden;
 text-align:center;
+background-color : white;
 }
 img{
-padding:10px;
-width: 80%;
+padding:300 vw;
+padding:300 vh;
+width: 25%;
+height: 24%;
+max-width : 50%;
 }
 
-.row{
-background-color: #e6dbd0
-}
+
 .col-sm-6{
 margin: 10px;
 padding: 10px;
-background-color: #F9E0D9;
+
 }
 .thumbnail{
-    background-color: #f3d9dc
+    padding : 50 vh ;
+    padding : 50 vw;
+    margin : hidden;
+    border : hidden;
+}
+
+.btn-primary
+{
+  background-color:#c78283;
+
+}
+
+.btn-primary:visited,.btn-primary:focus,.btn-primary:hover,.btn-primary:active{
+  background-color:#c78283;
+}
+
+.btn-primary:on-click{
+  background-color:#c78283;
 }

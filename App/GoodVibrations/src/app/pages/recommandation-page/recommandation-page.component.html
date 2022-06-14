@@ -1,20 +1,14 @@
-<!-- <div *ngIf="(afAuth.user | async)">
-    <br>
-    <button mat-raised-button color="primary" (click)="logout()">
-        Log out
-    </button>
--->
 <div class="container" *ngFor="let location of locationsListLucky; let i = index">
   <div class="row">
     <div class="col">
+      <h1><strong>{{location.locationName}}</strong></h1>
       <div class="thumbnail">
         <img src="{{location.photoUrl}}" alt="...">
         <div class="caption">
-          <h1><strong>{{location.locationName}}</strong></h1>
           <p class="bg-danger"><strong>Music Genres: {{location.musicGenres}}</strong></p>
           <p class="bg-danger"><strong>Address: {{location.address}}</strong></p>
-          <p class="bg-danger" style="border-bottom: 1px solid black"><strong>Volume Rating: {{location.volumeRating}}</strong></p>
-          <p class="bg-danger"style="border-bottom: 1px solid black"><a href="{{location.mapsUrl}}" class="btn btn-primary" role="button">View location!</a></p>
+          <p class="bg-danger" style="border-bottom: hidden"><strong>Volume Rating: {{location.volumeRating}}</strong></p>
+          <p class="bg-danger"style="border-bottom: hidden"><a href="{{location.mapsUrl}}" target="_blank" class="btn btn-primary" role="button">View location on maps!</a></p>
         </div>
       </div>
     </div>
