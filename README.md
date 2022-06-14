@@ -12,6 +12,7 @@ This is where we come in :)
 Our app offers all the necessary stats and info in order to make the best possible decision. For each place , the volume is rated from 0 to 10 , 10 being the loudest possible level of music. The genres played there are listed clearly , in order for anybody to find the most suitable place from the list.
 
 ## Demo
+See the demo here : https://youtu.be/fW1-tii6TUQ
 
 ## Backlog
 We used GitHub projects in order to create the backlog and manage our tasks durint the development of the application. The backlog can be found [here](https://github.com/users/maria-raluca-st/projects/1)
