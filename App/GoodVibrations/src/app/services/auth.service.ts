@@ -28,6 +28,7 @@ export class AuthService {
         console.log('Auth Service: loginUser: success');
       })
       .catch((error) => {
+        console.log(error);
         alert(error);
       });
   }

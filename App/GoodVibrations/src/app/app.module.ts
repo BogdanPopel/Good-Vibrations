@@ -15,14 +15,9 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-
-import {RouterTestingModule} from '@angular/router/testing';
-
 
 import { environment } from 'src/environments/environment';
 
@@ -54,7 +49,6 @@ import { MatInputModule } from '@angular/material/input';
     RouterModule,
     FormsModule,
     NoopAnimationsModule,
-    //RouterTestingModule
   ],
   exports: [
     AppComponent,
