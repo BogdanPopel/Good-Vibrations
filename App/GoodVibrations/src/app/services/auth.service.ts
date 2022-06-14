@@ -28,8 +28,21 @@ export class AuthService {
         console.log('Auth Service: loginUser: success');
       })
       .catch((error) => {
-        console.log(error);
-        alert(error);
+        if (error.code == 'auth/wrong-password') {
+          alert('Wrong password. Please try again!');
+        }
+        else if(error.code == "auth/user-not-found"){
+          alert("User not found. Please try again!")
+        }
+        else if(error.code == "auth/user-disabled"){
+          alert("User disabled. Please try again!")
+        }
+        else if(error.code == "auth/invalid-email"){
+          alert("Invalid email. Please try again!")
+        }
+        else{
+          alert("Login failed. Please try again!");
+        }
       });
   }
 
@@ -40,7 +53,15 @@ export class AuthService {
         let emailLower = user.email.toLowerCase();
       })
       .catch((error) => {
-        alert(error);
+        if (error.code == 'auth/account-exists-with-different-credential' || error.code=="auth/email-already-in-use") {
+          alert("Email already used. Go to login page!");
+        }
+        else if(error.code == "auth/invalid-email"){
+          alert("Invalid email. Please try again!")
+        }
+        else{
+          alert("Signup failed. Please try again!");
+        }
       });
   }
 }
