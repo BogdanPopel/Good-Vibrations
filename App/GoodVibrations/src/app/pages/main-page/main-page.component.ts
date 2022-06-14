@@ -41,6 +41,7 @@ export class MainPageComponent implements OnInit {
     this.locationsList = locations;
 
     this._id = this.locationsList.length + 1;
+    //this.clearFields();
   }
 
   getLocations() {
@@ -55,12 +56,19 @@ export class MainPageComponent implements OnInit {
   }
 
   async addLocation() {
+
     this._musicGenres = this._mg?.split(',');
     if (this._volume > 10) {
       this._volume = 10;
     }
     if (this._volume < 0) {
       this._volume = 0;
+    }
+    if ( this._photoUrl == ''){
+      this._photoUrl = ' ';
+    }
+    if ( this._mapsUrl == ''){
+      this._mapsUrl = ' ';
     }
     var data = {
       id: this._id,
@@ -79,9 +87,9 @@ export class MainPageComponent implements OnInit {
 
   clearFields() {
     this._locationName = '';
-    this._mapsUrl = '';
+    this._mapsUrl = ' ';
     this._mg = '';
-    this._photoUrl = '';
+    this._photoUrl = ' ';
     this._locationAddress = '';
     this._volume = 0;
   }
