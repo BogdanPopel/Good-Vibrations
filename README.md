@@ -15,7 +15,7 @@ Our app offers all the necessary stats and info in order to make the best possib
 See the demo here : https://youtu.be/fW1-tii6TUQ
 
 ## Backlog
-We used GitHub projects in order to create the backlog and manage our tasks durint the development of the application. The backlog can be found [here](https://github.com/users/maria-raluca-st/projects/1)
+We used GitHub projects in order to create the backlog and manage our tasks durint the development of the application. The backlog can be found [here](https://github.com/users/maria-raluca-st/projects/1).
 
 ## User Stories
 
@@ -47,8 +47,6 @@ During the development, we encountered some bugs:
 2. The location address was not sent to the database. We solved this issue by adding the "address" variable in the Location class [here](https://github.com/maria-raluca-st/Good-Vibrations/commit/a2c02734cf26daeca44a2a2020e18055a6d6bbc6).
 
 3. The location image did not appear because VSC Prettier extension deleted a curly brace when adding the value to the frontend. The issue was solved [here](https://github.com/maria-raluca-st/Good-Vibrations/commit/b8f64408b6e9601f7e5737e482a1b4c7b9ac7740).
-
-4. The footer was not transparent, so some of our components were not visible. We fixed this issue [here]().
 
 
 ## Automation Testing
